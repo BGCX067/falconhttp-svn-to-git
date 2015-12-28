@@ -1,0 +1,23 @@
+#summary Howto run it?
+#labels compile,run
+
+= Introduction =
+
+It should be very easy to get it running. As it was developed using eclipse CDT, all you need is:
+-eclipse (used version: Galileo)
+-CDT plugin (take the CDT+Eclipse bundle from the eclipse download site)
+-SVN plugin (e.g. Subclipse)
+
+The SVN should contain the whole project configuration to import it directliy into eclipse.
+Adapt the run-configuration and change some parameters in the server.config file, and it should work.
+
+Easy... Isn't it?
+
+= Details =
+
+If you want to compile it outside eclipse:
+remember that gcc to compile it with threads needs the -pthread flag
+whole compilestring
+gcc -lpthread -lrt -lgcc_s -o"WebServer" ...
+
+Btw: The server was implemented on Ubuntu Linux, so if you use another operating system some of the functionality may not work.
